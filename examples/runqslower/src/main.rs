@@ -15,13 +15,13 @@ use bpf::*;
 #[derive(Debug, StructOpt)]
 struct Command {
     /// Trace latency higher than this value
-    #[structopt(default_value = "10000")]
+    #[structopt(short, long, default_value = "10000")]
     latency: u64,
     /// Process PID to trace
-    #[structopt(default_value = "0")]
+    #[structopt(short, long, default_value = "0")]
     pid: i32,
     /// Thread TID to trace
-    #[structopt(default_value = "0")]
+    #[structopt(short, long, default_value = "0")]
     tid: i32,
     /// Verbose debug output
     #[structopt(short, long)]
